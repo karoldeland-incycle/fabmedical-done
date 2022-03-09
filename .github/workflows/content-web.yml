@@ -66,7 +66,6 @@ jobs:
         container-registry-username: ${{ secrets.ACR_USERNAME }}
         container-registry-password: ${{ secrets.ACR_PASSWORD }}
         secret-name: ingress-demo-secret
-        namespace: ingress-demo
         arguments: --force true
         
     - name: Deploy to AKS
@@ -79,4 +78,3 @@ jobs:
           ${{ env.containerRegistry }}.azurecr.io/${{ env.imageRepository }}:${{ env.tag }}
         imagepullsecrets: |
           ingress-demo-secret
-        namespace: ingress-demo
