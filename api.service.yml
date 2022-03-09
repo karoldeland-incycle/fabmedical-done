@@ -4,7 +4,6 @@ metadata:
   labels:
     app: api
   name: api
-  namespace: ingress-demo
 spec:
   ports:
     - name: api-traffic
